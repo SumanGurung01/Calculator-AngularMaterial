@@ -1,0 +1,52 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My Calculator</span>
+    <span class="example-spacer"></span>
+</mat-toolbar>
+  <br>
+
+<div class="main">
+
+  <div class="user">
+    Number 1: <input type="text" #num1 value="">
+    <br>
+    Number 2: <input type="text" #num2 value="">
+  </div>
+  <br>
+  <section>
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="add(num1.value,num2.value)">Add</button>
+    <button mat-raised-button color="primary" (click)="sub(num1.value,num2.value)">Subtract</button>
+    <button mat-raised-button color="primary" (click)="mul(num1.value,num2.value)">Multiply</button>
+    <button mat-raised-button color="primary" (click)="div(num1.value,num2.value)">Divide</button>
+  </div>
+  </section>
+
+  <br>
+
+<mat-card>
+  <mat-card-title>Result</mat-card-title>
+  <p>{{result}}</p>
+</mat-card>
+
+<br>
+
+<div class="user">
+  Number : <input type="text" #num3 value="">
+</div>
+<br>
+<section>
+<div class="example-button-row">
+  <button mat-raised-button color="primary" (click)="prime(num3.value)">Prime and Factorial</button>
+</div>
+</section>
+
+<mat-card>
+  <mat-card-title>Result</mat-card-title>
+  <p>{{res}} Factorial:{{fact}}</p>
+
+</mat-card>
+
+</div>
